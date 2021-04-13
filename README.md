@@ -1,10 +1,13 @@
 # Interpreter
 
 1	Introduction
+
 1.1	Project Overview
 The goal of this was to build an Interpreter for a language X. The project skeleton and some code was provided with some files and they were already implemented for us. We had to work on the bytecode and create abstract class which were extended and implemented by the different types of bytecode, VirtualMachine, Program, RunTimeStack, and Interpreter class. The Interpreter and the VirtualMachine work together to run the program. 
+
 1.2	Technical Overview
 The ByteCodeLoader class reads the bytecode classes from a file and then loads it into the program and also resolves the addresses with symbols. The Program class uses an ArrayList of bytecodes which are loaded from the ByteCodeLoader class. The RunTimeStack class uses frame stack and runtime stack to push a new frame whenever a function is invoked and removing it after it is processed. The VirtualMachine executes the Program by creating an instance of the RunTimeStack and returnAddress, and executes every bytecode until the program is running. 
+
 1.3	Summary of Work Completed
 Implemented the ByteCode classes : Halt, Pop, FalseBranch, Goto, Store, Load, Lit, Args, Call, Return, Bop, Read, Write, Label and Dump with ByteCode abstraction. Implemented ByteCodeLoader, Program, RuntimeStack and VirtualMachine classes. The Interpreter and CodeTable classes were already implemented for us. The Interpreter class is the entry point.
 
